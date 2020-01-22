@@ -193,6 +193,7 @@
     </Content>
     <Content Include="Readme\天气信息结构\天气信息结构-1.jpg" />
     <Content Include="Readme\天气信息结构\天气信息结构-2.jpg" />
+    <Content Include="Readme\数据库结构.png" />
     <Content Include="Readme\系统服务工具\InstallUtil.exe" />
   </ItemGroup>
   <ItemGroup>
