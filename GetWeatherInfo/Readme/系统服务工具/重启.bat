@@ -1,0 +1,3 @@
+net stop WeatherInfoService
+net start WeatherInfoService
+pause

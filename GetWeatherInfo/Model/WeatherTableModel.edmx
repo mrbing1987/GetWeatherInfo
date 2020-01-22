@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WeatherInfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="WeatherTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InsertDate" Type="varchar" MaxLength="255" />
+          <Property Name="Province" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+          <Property Name="Code" Type="varchar" MaxLength="255" />
+          <Property Name="CodeImage" Type="varchar" MaxLength="255" />
+          <Property Name="DateTime" Type="varchar" MaxLength="255" />
+          <Property Name="Temperature_1" Type="varchar" MaxLength="255" />
+          <Property Name="WeatherInfo_1" Type="varchar" MaxLength="255" />
+          <Property Name="WindInfo_1" Type="varchar" MaxLength="255" />
+          <Property Name="Image_1_1" Type="varchar" MaxLength="255" />
+          <Property Name="Image_1_2" Type="varchar" MaxLength="255" />
+          <Property Name="WeatherDetail_1_1" Type="varchar" MaxLength="255" />
+          <Property Name="WeatherDetail_1_2" Type="varchar" MaxLength="255" />
+          <Property Name="Temperature_2" Type="varchar" MaxLength="255" />
+          <Property Name="WeatherInfo_2" Type="varchar" MaxLength="255" />
+          <Property Name="WindInfo_2" Type="varchar" MaxLength="255" />
+          <Property Name="Image_2_1" Type="varchar" MaxLength="255" />
+          <Property Name="Image_2_2" Type="varchar" MaxLength="255" />
+          <Property Name="Temperature_3" Type="varchar" MaxLength="255" />
+          <Property Name="WeatherInfo_3" Type="varchar" MaxLength="255" />
+          <Property Name="WindInfo_3" Type="varchar" MaxLength="255" />
+          <Property Name="Image_3_1" Type="varchar" MaxLength="255" />
+          <Property Name="Image_3_2" Type="varchar" MaxLength="255" />
+          <Property Name="CityNotes" Type="varchar" MaxLength="2048" />
+        </EntityType>
+        <EntityContainer Name="WeatherInfoModelStoreContainer">
+          <EntitySet Name="WeatherTable" EntityType="Self.WeatherTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WeatherInfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="WeatherTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InsertDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Province" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CodeImage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DateTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Temperature_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherInfo_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WindInfo_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_1_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_1_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherDetail_1_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherDetail_1_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Temperature_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherInfo_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WindInfo_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_2_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_2_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Temperature_3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherInfo_3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WindInfo_3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_3_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Image_3_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CityNotes" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="WeatherInfoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="WeatherTables" EntityType="Self.WeatherTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WeatherInfoModelStoreContainer" CdmEntityContainer="WeatherInfoEntities">
+          <EntitySetMapping Name="WeatherTables">
+            <EntityTypeMapping TypeName="WeatherInfoModel.WeatherTable">
+              <MappingFragment StoreEntitySet="WeatherTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CodeImage" ColumnName="CodeImage" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Temperature_1" ColumnName="Temperature_1" />
+                <ScalarProperty Name="WeatherInfo_1" ColumnName="WeatherInfo_1" />
+                <ScalarProperty Name="WindInfo_1" ColumnName="WindInfo_1" />
+                <ScalarProperty Name="Image_1_1" ColumnName="Image_1_1" />
+                <ScalarProperty Name="Image_1_2" ColumnName="Image_1_2" />
+                <ScalarProperty Name="WeatherDetail_1_1" ColumnName="WeatherDetail_1_1" />
+                <ScalarProperty Name="WeatherDetail_1_2" ColumnName="WeatherDetail_1_2" />
+                <ScalarProperty Name="Temperature_2" ColumnName="Temperature_2" />
+                <ScalarProperty Name="WeatherInfo_2" ColumnName="WeatherInfo_2" />
+                <ScalarProperty Name="WindInfo_2" ColumnName="WindInfo_2" />
+                <ScalarProperty Name="Image_2_1" ColumnName="Image_2_1" />
+                <ScalarProperty Name="Image_2_2" ColumnName="Image_2_2" />
+                <ScalarProperty Name="Temperature_3" ColumnName="Temperature_3" />
+                <ScalarProperty Name="WeatherInfo_3" ColumnName="WeatherInfo_3" />
+                <ScalarProperty Name="WindInfo_3" ColumnName="WindInfo_3" />
+                <ScalarProperty Name="Image_3_1" ColumnName="Image_3_1" />
+                <ScalarProperty Name="Image_3_2" ColumnName="Image_3_2" />
+                <ScalarProperty Name="CityNotes" ColumnName="CityNotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
